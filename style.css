@@ -1871,8 +1871,30 @@ body::before {
 }
 
 .schedule-row {
-    grid-template-columns: 58px 86px minmax(0, 1fr) 160px;
+    grid-template-columns: 58px 86px 58px minmax(0, 1fr) 160px;
     align-items: center
+}
+
+.hero > *,
+.section-head > *,
+.statement > *,
+.info-layout > *,
+.faq-layout > *,
+.artist-card,
+.ticket,
+.schedule-row > * {
+    min-width: 0
+}
+
+.section-copy,
+.statement p,
+.info-block,
+.faq-list,
+.artist-info,
+.ticket,
+.schedule-row h3,
+.schedule-row .stage {
+    overflow-wrap: anywhere
 }
 
 .schedule-row .stage {
@@ -1970,12 +1992,12 @@ body::before {
     }
 
     .schedule-row {
-        grid-template-columns: 48px 70px minmax(0, 1fr);
+        grid-template-columns: 48px 70px 58px minmax(0, 1fr);
         gap: 10px
     }
 
     .schedule-row .stage {
-        grid-column: 3;
+        grid-column: 4;
         text-align: left
     }
 
@@ -2013,6 +2035,16 @@ body::before {
 
     .page-lead {
         font-size: 1rem
+    }
+
+    .schedule-row {
+        grid-template-columns: 36px 58px 46px minmax(0, 1fr);
+        gap: 7px
+    }
+
+    .artist-disc {
+        width: 46px;
+        font-size: .72rem
     }
 
     .footer-bottom {
